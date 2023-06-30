@@ -6,4 +6,5 @@ text = """
 # TODO
 context = text.replace(".", "").replace(",", "")
 list = list(map(len, context.strip().split()))
+
 print(''.join(map(str, list)))
