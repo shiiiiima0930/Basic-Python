@@ -11,9 +11,11 @@ N = 100
 S = 0
 h = (b - a) / N
 
-for k in range(N):
+f = sin
+
+for k in range(1, N+1):
     x1 = a + (k - 1) * h
     x2 = a + k * h
-    S += (sin(x1) + sin(x2)) * h / 2
+    S += (f(x1) + f(x2)) * h / 2
 
 print(S)

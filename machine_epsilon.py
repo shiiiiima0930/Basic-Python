@@ -1,11 +1,8 @@
 # TODO
 epsilon = 1
-small = 1
-while True:
-    small *= 1/2
-    if 1 + epsilon > 1:
-        epsilon = small
-    else:
-        break
+while 1 + epsilon > 1:
+    epsilon /= 2
+
+epsilon *= 2
 
 print(epsilon)
