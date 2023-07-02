@@ -10,7 +10,6 @@ N = 100
 
 S = 0
 h = (b - a) / N
-
 f = sin
 
 for k in range(1, N+1):
