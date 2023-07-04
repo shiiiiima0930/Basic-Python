@@ -4,16 +4,19 @@ from math import sin, pi
 # >>> 0
 # -----------
 
-a = 0
-b = pi / 2
-N = 100
+def f(x):
+    return x**2
 
-S = 0
-h = (b - a) / N
+def trapezoidal_integral(f, a=0, b=1, n=100):
+    width = (b-a) / n
+    integral = 0
+    for i in range(n):
+        s = a + width * i
+        t = s + width 
+        integral += (f(s) + f(t)) * width / 2 
+    return integral
 
-for k in range(N):
-    x1 = a + (k - 1) * h
-    x2 = a + k * h
-    S += (sin(x1) + sin(x2)) * h / 2
-
-print(S)
+a = float(input("左端："))
+b = float(input("右端："))
+n = int(input("分割数："))
+print(trapezoidal_integral(f, a, b, n))
